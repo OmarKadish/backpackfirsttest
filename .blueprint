@@ -1,0 +1,13 @@
+created:
+    - database/factories/ClassroomFactory.php
+    - database/factories/StudentFactory.php
+    - database/migrations/2022_02_07_152034_create_classrooms_table.php
+    - database/migrations/2022_02_07_152035_create_students_table.php
+    - app/Models/Classroom.php
+    - app/Models/Student.php
+    - database/seeders/ClassroomSeeder.php
+    - database/seeders/StudentSeeder.php
+models:
+    User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
+    Classroom: { name: string, relationships: { hasMany: Student } }
+    Student: { name: string, photo_path: text, adress: 'string:400', classroom_id: 'id foreign' }

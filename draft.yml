@@ -1,0 +1,12 @@
+models:
+  Classroom:
+    name: string
+    relationships:
+      hasMany: Student
+  Student:
+    name: string
+    photo_path: text
+    adress: string:400
+    classroom_id: id foreign
+
+seeders: Classroom, Student
